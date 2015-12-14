@@ -1,15 +1,4 @@
-<div class="bigbox">
-	<div class="box">
-		<% @messages.each do |message| %>
-			<div class="message">
-				<div class="top-message">
-					<li class="writing"><%= message.message.body %></li>
-				</div>
 
-				<div class="bottom-message">
+		<% @messages.each do |message| %><%= message.message.body %>
 					<span>From </span><%= message.message.sender.email %>
-				</div>
-			</div>
 		<% end %>
-	</div>
-</div>

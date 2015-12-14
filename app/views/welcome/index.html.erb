@@ -1,8 +1,7 @@
 
-  <% if @user %>
-    <%= @user.email %></h1>
+  
+<p class="welcomeImg"><%= image_tag("http://i.imgur.com/cwnanYW.png") %></p>
+  <% if current_user %>
+    <p class="welcomeEmail"><%= @user.email %></p>
     <%= link_to 'Log out', login_path(@user), :method => :delete %>
-  <% else %>
-    <%= link_to 'Log in', new_login_path %>
-    <%= link_to 'Sign up', new_user_path %>
   <% end %>
