@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :users
   resources :login
+  resources :messages, only: [:create, :destroy, :index, :new]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

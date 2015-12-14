@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209104630) do
+ActiveRecord::Schema.define(version: 20151214065032) do
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "sender_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recipients", force: :cascade do |t|
+    t.integer  "message_id"
+    t.integer  "user_id"
+    t.boolean  "read",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "recipients", ["user_id"], name: "index_recipients_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string "email"
