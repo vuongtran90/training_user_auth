@@ -1,0 +1,90 @@
+body {
+font-family: "Raleway", Arial, sans-serif;
+background: #252328;
+color: #fff;
+}
+header {
+color: #fff;
+overflow: hidden;
+padding: 10px 2% 15px;
+font-size: 14px;
+border-bottom: 1px solid #353338;
+/*color: #EA504E;*/
+}
+.wrapper {
+width: 98%;
+max-width: 1000px;
+margin: 2% auto;
+box-sizing: border-box;
+overflow: hidden;
+background: #1d1a21;
+border-radius: 5px;
+}
+header nav a {
+color: #fff;
+}
+.logo {
+float: left;
+}
+nav {
+float: right;
+padding-top: 19px;
+}
+nav li {
+float: left;
+margin-left: 20px;
+}
+
+.container {
+}
+.formImg {
+float: left;
+}
+.wrapForm {
+width: 1000px;
+margin: 0 auto;
+overflow: hidden;
+}
+.form {
+width: 460px;
+padding: 20px;
+background: #353338;
+margin: 50px auto;
+text-align: center;
+border-radius: 5px;
+}
+.form input {
+width: 420px;
+height: 50px;
+margin-bottom: 15px;
+border: none;
+border-radius: 5px;
+}
+
+.form > p:first-child {
+margin-bottom: 20px;
+}
+.form > p:nth-child(2) {
+margin-bottom: 30px;
+font-size: 22px;
+font-weight: 300;
+color: #fff;
+}
+.inputText {
+padding: 0 20px;
+}
+.inputSubmit {
+font-weight: 600;
+letter-spacing: 1px;
+color: #EA504E;
+margin-top: 20px;
+background: #fff;
+}
+.formContent img {
+width: 86%;
+}
+.formContent h2 {
+font-size: 22px;
+font-weight: 300;
+padding-bottom: 40px;
+}

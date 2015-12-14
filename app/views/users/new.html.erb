@@ -1,12 +1,13 @@
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit 'Sign up' %>
-<% end %>
+<div class="form">
+  <p><%= image_tag("http://i.imgur.com/GQnJwSG.png?1") %></p>
+  <p>LOGIN AND CONTINUE MESSAGING</p>
+  <%= form_for @user do |f| %>
+  
+    <%= f.text_field :user_name, :placeholder => "USER NAME", :class => 'inputText' %>
+    <%= f.text_field :email, :placeholder => "EMAIL", :class => 'inputText' %>
+    <%= f.password_field :password, :placeholder => "PASSWORD", :class => 'inputText' %>
+    <%= f.password_field :password_confirmation, :placeholder => "PASSWORD CONFIRMATION", :class => 'inputText' %>
+  
+    <%= f.submit 'SIGN UP', :class => "inputSubmit" %>
+  <% end %>
+</div>

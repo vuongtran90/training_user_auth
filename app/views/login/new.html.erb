@@ -1,9 +1,11 @@
-<%= form_for @user, {url: '/login', :method => 'post'} do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit 'Log in' %>
-<% end %>
+<div class="form">
+    <p><%= image_tag("http://i.imgur.com/GQnJwSG.png?1") %></p>
+    <p>LOGIN AND CONTINUE MESSAGING</p>
+  <%= form_for @user, {url: '/login', :method => 'post'} do |f| %>
+    <%= f.text_field :email,:placeholder => "EMAIL", :class => 'inputText' %>
+    <%= f.password_field :password,:placeholder => "PASSWORD", :class => 'inputText' %>
+  
+    <%= f.submit 'LOGIN', :class => 'inputSubmit' %>
+  <% end %>
+</div>

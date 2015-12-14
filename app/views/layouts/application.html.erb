@@ -7,9 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: name %>
-<% end %>
+    <div class="wrapper">
+        
+      <header>
+          <div class="logo">
+              <%= link_to image_tag("http://i.imgur.com/UxE0Ie8.png?1"), root_path %>
+          </div>
+          <nav>
+              <ul>
+                  <% if @user %>
+                      <li><a href="">NEW MESSAGE</a></li>
+                      <li><a href="">INBOX (4)</a></li>
+                      
+                  <% else %>
+                      <li><%= link_to 'SIGN IN', new_login_path %></li>
+                      <li><%= link_to 'SIGN UP', new_user_path %></li>
+                  <% end %>
+              </ul>
+          </nav>
+      </header>
+	<div class="container">
+		<% flash.each do |message_type, message| %>
+			<div id="flash" class="flash-<%= message_type %>"><%= message %></div>
+		<% end %>
+	</div>
 <%= yield %>
 
 </body>
